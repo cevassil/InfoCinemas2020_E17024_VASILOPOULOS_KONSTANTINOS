@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+	{% block head %}
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	{% endblock %}
+	{% block body %}
+	{% if error %}
+		<div class="alert">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			Αυτά τα στοιχεία υπάρχουν ήδη. Παρακαλώ συνδεθείτε.
+		</div>
+	{% endif %}	
+		<div class="register">
+			<h1>Εγγραφή</h1>
+			<div class="links">
+				<a href="{{ url_for('login') }}">Σύνδεση</a>
+				<a href="{{ url_for('register') }}" class="active">Εγγραφή</a>
+			</div>
+			<form action="{{ url_for('register') }}" method="POST" autocomplete="off">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Όνομα Χρήστη" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Κωδικός Πρόσβασης" id="password" required>
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				<input type="email" name="email" placeholder="Email" id="email" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	{% endblock %}

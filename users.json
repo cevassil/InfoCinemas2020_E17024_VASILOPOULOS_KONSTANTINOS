@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Admin",
+		"email": "admin@infocinema.com",
+		"password": "admin",
+		"ticket history" : "",
+		"category": "admin"
+	},
+	{
+		"name": "costas",
+		"email": "costas@mail.com",
+		"password": "costas",
+		"ticket history" : "",
+		"category": "user"
+	},
+	{
+		"name": "jim",
+		"email": "jim@mail.com",
+		"password": "jim",
+		"ticket history" : "",
+		"category": "user"
+	},
+	{
+		"name": "mary",
+		"email": "mary@mail.com",
+		"password": "mary",
+		"ticket history" : "",
+		"category": "user"
+	}
+]
